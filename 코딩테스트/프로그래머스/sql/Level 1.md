@@ -1,0 +1,54 @@
+### 2020.08.28
+
+1. 모든 레코드 조회하기
+```sql
+SELECT * FROM ANIMALS_INS
+```
+
+
+2. 역순 정렬하기
+```sql
+SELECT NAME, DATETIME FROM ANIMAL_INS order by ANIMAL_ID desc
+```
+
+
+3. 아픈 동물 찾기
+```sql
+SELECT ANIMAL_ID, NAME FROM ANIMAL_INS WHERE INTAKE_CONDITION = "Sick"
+```
+
+
+4. 어린 동물 찾기
+```sql
+SELECT ANIMAL_ID, NAME FROM ANIMAL_INS WHERE INTAKE_CONDITION != "Aged"
+```
+
+
+5. 동물의 아이디와 이름
+```sql
+SELECT ANIMAL_ID, NAME FROM ANIMAL_INS ORDER BY ANIMAL_ID
+```
+
+
+6. 여러 기준으로 정렬하기
+```sql
+SELECT ANIMAL_ID, NAME, DATETIME FROM ANIMAL_INS ORDER BY NAME, DATETIME DESC
+```
+
+
+7. 상위 n개 레코드
+```sql
+SELECT NAME FROM ANIMAL_INS ORDER BY DATETIME LIMIT 1
+```
+
+
+8. 이름이 없는 동물의 아이디
+```sql
+SELECT ANIMAL_ID FROM ANIMAL_INS WHERE NAME IS NULL
+```
+
+
+9. 이름이 있는 동물의 아이디
+```sql
+SELECT ANIMAL_ID FROM ANIMAL_INS WHERE NAME IS NOT NULL
+```
